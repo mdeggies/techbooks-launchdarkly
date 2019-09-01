@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tech Books</title>
+  <base href="/">
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+  <link rel="stylesheet" href="styles.css" type="text/html">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script>
+    var global = global || window;
+    var Buffer = Buffer || [];
+    var process = process || {
+      env: { DEBUG: undefined },
+      version: []
+    };
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <app-navbar></app-navbar>
+
+  <div class="container wrapper">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Discover new books</h2>
+        <br><br>
+        Discover the best new tech books from the GoodReads API!<br><br>As a regular user, you'll be able to view the
+        top 20
+        tech
+        books.<br>As a QA user, you'll be able to use our new infinite scroll feature to view a whole lot more.
+        <br><br>
+        <app-users></app-users>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          Questions/feedback? Reach out!
+          <br>
+          <br>
+          <abbr title="Email">Email:</abbr>
+          <a href="mailto:#">mdeggies@gmail.com</a>
+          <br>
+          <abbr title="Github">Github:</abbr>
+          <a href="https://github.com/mdeggies/techbooks-launchdarkly/issues">techbooks-launchdarkly</a>
+        </address>
+      </div>
+    </div>
+
+    <!-- Dynamically load data inside of app-cards -->
+    <app-cards></app-cards>
+
+  </div>
+
+  <br><br><br>
+
+  <app-footer></app-footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+
+</html>

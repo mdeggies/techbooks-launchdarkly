@@ -1,0 +1,15 @@
+body {
+    padding-top: 56px;
+  }
+  
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  .wrapper {
+    min-height: 100%;
+    margin: 0 auto -10px; /* the bottom margin is the negative value of the footer's height */
+  }
+  
