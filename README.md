@@ -26,7 +26,7 @@ This is an Angular 8.1.1 app that makes requests to our backend to get data abou
 2. Run `npm install` to install the required dependencies.
 3. Rename the `.env-example` file to `.env`: `mv .env-example .env`.
 4. In `.env`, set the value for `LAUNCH_DARKLY_API_KEY` to a real value. After creating a trial account on [LaunchDarkly](https://launchdarkly.com), you can go to [https://app.launchdarkly.com/settings/projects](https://app.launchdarkly.com/settings/projects) to view the `Client-side ID` for your `Test` environment. Our app needs these values set in order to authenticate to the API and make requests to LaunchDarkly's API, which is used for interacting with our users and feature flag states. 
-5. Run `ng serve` to start the server in development mode. If you make any changes to the app, they'll be picked up automatically and your browser will reload with the latest code. 
+5. Run `npm start` to start the server in development mode. If you make any changes to the app, they'll be picked up automatically and your browser will reload with the latest code. 
 6. By default, the server will run on port 4200, and will be available at `localhost:4200`. Navigate to `localhost:4200` in your favorite browser to view the UI. 
 7. Follow the steps under the `Backend` section to start your server -- this is what the frontend will call to get our books!
 
