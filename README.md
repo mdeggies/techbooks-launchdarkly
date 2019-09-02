@@ -10,10 +10,6 @@ Dashboard View:
 
 ![Dashboard View](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/dashboard.png)
 
-LaunchDarkly Feature Flag Page:
-
-![LaunchDarkly Feature Flag Page](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/flags.png)
-
 ## Pre-Req's
 
 1. If you don't already have a LaunchDarkly account, sign up for one at [launchdarkly.com][https://launchdarkly.com). 
@@ -21,6 +17,10 @@ LaunchDarkly Feature Flag Page:
 3. Save the flag, and then click on it to navigate to the details page. Turn `Targeting` on in the `Test` environment, as we want to provide our users with different features. 
 4. Under `Target individual users`, add `QA` to `true`. Under `Default rule`, make sure that `Serve` is set to `false`, as we want everyone other than `QA` to experience our stable site. Save your changes. 
 5. Go to your [Account Settings Page](https://app.launchdarkly.com/settings/projects) and keep your `Test` environment's `Client-side ID` handy! We'll be using this as we set up the frontend. 
+
+This is how your LaunchDarkly feature flag called `inifinite-scroll` should be configured:
+
+![LaunchDarkly Feature Flag Page](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/flags.png)
 
 ### Frontend: `launchdarkly-techbooks/frontend`
 
