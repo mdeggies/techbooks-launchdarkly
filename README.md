@@ -6,9 +6,13 @@ We're using [LaunchDarkly](https://launchdarkly.com) and [LaunchDarkly's client-
 
 GIF recording: http://g.recordit.co/DBXEvxaZhE.gif
 
-![UI View](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/dashboard.png)
+Dashboard View:
 
-![LaunchDarkly Feature Flag Setup](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/flags.png)
+![Dashboard View](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/dashboard.png)
+
+LaunchDarkly Feature Flag Page:
+
+![LaunchDarkly Feature Flag Page](https://raw.githubusercontent.com/mdeggies/techbooks-launchdarkly/master/frontend/images/flags.png)
 
 ## Pre-Req's
 
