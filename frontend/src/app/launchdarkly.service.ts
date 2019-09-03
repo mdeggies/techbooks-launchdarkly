@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs'
 import { initialize, LDClient, LDFlagSet, LDUser } from 'ldclient-js';
 import { environment } from './../environments/environment';
+import { CardsComponent } from './cards/cards.component';
 
 @Injectable()
 export class LaunchDarklyService {

@@ -6,7 +6,7 @@ import { LaunchDarklyService } from '../launchdarkly.service';
   selector: 'app-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css'],
-  providers: [LaunchDarklyService],
+  providers: [LaunchDarklyService]
 })
 
 export class CardsComponent implements OnInit {
@@ -20,6 +20,7 @@ export class CardsComponent implements OnInit {
   users = ["QA", "Developer", "Anonymous", "End-User"]
   user = this.users[0];
 
+  // Subscribe to infinite-scroll flag changes from LaunchDarkly
   constructor(private http: HttpClient, private ld: LaunchDarklyService) {
     this.infinite_scroll = ld.flags['infinite-scroll'];
     this.infinite_scroll_subscription = ld.flagChange.subscribe((flags) => {
@@ -27,6 +28,7 @@ export class CardsComponent implements OnInit {
     });
   }
 
+  // When a new user is selected, change the current user
   changeUser(userKey) {
     this.ld.changeUser(userKey);
   }
@@ -44,15 +46,14 @@ export class CardsComponent implements OnInit {
       catch (err) {
         this.cards = [];
       }
-      this.getMoreBooks();
     });
   }
 
-  // If the infinite_scroll feature flag is turned on for the current user, request more books 
-  // from the backend and display them!
+  // If the infinite_scroll feature flag is turned on for the current user,  
+  // request more books from the backend and display them
   getMoreBooks() {
     this.pageCount++;
-    console.log(this.ld.ldClient.getUser().key + ":" + this.infinite_scroll);
+    console.log('Current user: ' + this.ld.ldClient.getUser().key + "; Infinite-scroll feature: " + this.infinite_scroll);
     if (this.infinite_scroll) {
       this.http.get('http://localhost:3000/books?page=' + this.pageCount).subscribe(books => {
         const keys = Object.keys(books);

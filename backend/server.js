@@ -12,16 +12,12 @@ require('dotenv').config();
 
 const goodreads_api_key = process.env.GOODREADS_API_KEY;
 const goodreads_api_secret = process.env.GOODREADS_API_SECRET;
-
-const myCredentials = {
-    key: goodreads_api_key,
-    secret: goodreads_api_secret,
-};
+const gr = goodreads({ key: goodreads_api_key, secret: goodreads_api_secret });
 
 app.use(cors())
-const gr = goodreads(myCredentials);
 
-// Return an array of tech book details in the format { "title": book_title, "author": book_author, "image": url }
+// Return an array of tech book details from GoodReads in the format
+// { "title": book_title, "author": book_author, "image": url }
 async function returnBookDetails(page) {
     const details = [];
     const getBooks = await gr.searchBooks({ q: "technology", page: page, field: "all" });
@@ -41,17 +37,17 @@ async function returnBookDetails(page) {
     return details;
 }
 
+// Resolve the promise from the async function and catch any errors
 const asyncMiddleware = fn =>
     (req, res, next) => {
         Promise.resolve(fn(req, res, next))
             .catch(next);
     };
 
-// Returns the book details array in the response, when /books is invoked
+// Return the book details array as the response, when /books is invoked
 app.get('/books', asyncMiddleware(async (req, res, next) => {
     if (req.query.page) {
         const books = await returnBookDetails(req.query.page);
-        console.log(books);
         res.send(books)
     }
 }));
