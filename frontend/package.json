@@ -23,7 +23,7 @@
     "bootstrap": "4.3.1",
     "dotenv": "^8.1.0",
     "i": "^0.3.6",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "ldclient-js": "^2.10.2",
     "ngx-infinite-scroller": "^0.4.5",
     "npm": "^6.11.2",
