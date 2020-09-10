@@ -1,0 +1,15 @@
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2020.04
+    steps:
+      - checkout
+      - run:
+          name: Master who dis
+          command: echo "Hello master master master master master"
+
+workflows:
+  version: 2
+  circle-test:
+    jobs:
+      - build
