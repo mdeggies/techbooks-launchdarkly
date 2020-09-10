@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: Master who dis
-          command: echo "Hello master master master master master"
+          command: echo "Hello main main main main main"
 
 workflows:
   version: 2
