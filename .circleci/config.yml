@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Master who dis
+          name: who dis
           command: echo "Hello master master master master master"
 
 workflows:
