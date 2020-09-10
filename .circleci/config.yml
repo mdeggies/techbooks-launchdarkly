@@ -5,8 +5,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Master who dis
-          command: echo "Hello main main main main main"
+          name: who dis
+          command: echo "Hello master master master master master"
 
 workflows:
   version: 2
